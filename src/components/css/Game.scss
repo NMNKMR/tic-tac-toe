@@ -10,6 +10,23 @@
     position: relative;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.75);
 
+    > h3 {
+        color: #FFF;
+        position: absolute;
+        top: 1.5rem;
+        letter-spacing: 0.1rem;
+        
+        span {
+            color: var(--grey);
+            text-decoration: underline;
+        }
+        
+        svg {
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+    }
+
     .logo {
         position: absolute;
         top: 8.7rem;
@@ -24,12 +41,6 @@
             left: 3.5rem;
         }
     }
-    
-    .game-over-box {
-        background-color: rgba(0,0,0,0.73);
-        position: absolute;
-        z-index: 5;
-    }
 }
 
 @media screen and (max-width: 500px) {
@@ -43,4 +54,12 @@
         }
     }
  
+}
+
+@media screen and (max-width: 970px) {
+    .game-box {
+        width: 100vw;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }

@@ -1,0 +1,40 @@
+.username {
+
+    h3 {
+        margin-top: 0;
+        color: #FFF;
+    }
+
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        input {
+            background-color: transparent;
+            border: 1px solid var(--grey);
+            outline: none;
+            border-radius: 0.625rem;
+            padding-left: 1rem;
+            width: 35%;
+            height: 2.0625rem;
+            font-size: 1.2rem;
+            color: var(--grey);
+        }
+
+        button {
+            width: 20%;
+            height: 2.25rem;
+            background-color: var(--aqua);
+            border-radius: 0.625rem;
+            font-size: 1rem;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        color: rgb(249, 85, 85);
+        margin-bottom: 0;
+    }
+}

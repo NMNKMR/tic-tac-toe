@@ -6,12 +6,24 @@
     --bg-color: #192A32;
     --grey: #D9D9D9;
     --dark-bg-color: #1F3540;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     font-family: 'DM Sans', sans-serif;
     background-color: #0E4355;
     margin: 0;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--bg-color);
+}
+
+button:active {
+    scale: 0.9;
 }
 
 #game {
@@ -37,5 +49,10 @@ body {
 @media screen and (max-width: 975px) {
     #quote {
         display: none;
+    }
+
+    #game {
+        height: 100svh;
+        align-items: end;
     }
 }

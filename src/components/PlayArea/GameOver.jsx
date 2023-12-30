@@ -1,15 +1,17 @@
 import React from 'react'
-import {Logo} from './index';
-import './css/GameOver.scss';
+import {Logo} from '../index';
+import '../css/GameOver.scss';
 
 function GameOver({
     gameResult="",
     message="",
     refresh=false,
+    showNewGameButton=true,
     winner="",
+    newRoundTimer,
     handleQuit,
     handlePlayAgain,
-    handleClosePopup,
+    handleNewGame,
 }) {
   return (
     <div className='game-over'>
@@ -20,11 +22,9 @@ function GameOver({
           </h1>
         <div className="game-over-buttons">
             <button style={{order: refresh ? 1 : 0}} className='quit' onClick={handleQuit}>QUIT</button>
-            <button className='play-again' onClick={handlePlayAgain}>{refresh ? "NEW GAME" : "PLAY AGAIN"}</button>
+            {showNewGameButton && <button className='play-again' onClick={refresh? handleNewGame : handlePlayAgain}>{refresh ? "NEW GAME" : "PLAY AGAIN"}</button>}
         </div>
-        {refresh && <div className="close-popup" onClick={handleClosePopup}>
-            &#215;
-        </div>}
+        {newRoundTimer && <p style={{color: "#FFF", marginBottom: 0}}>new round starting...</p>}
     </div>
   )
 }

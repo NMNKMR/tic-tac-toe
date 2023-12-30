@@ -56,10 +56,6 @@
             border-radius: 0.3125rem;
             width: 19.1875rem;
             height: 2.5rem;
-            border: none;
-            cursor: pointer;
-            color: var(--bg-color);
-            font-weight: 600;
             font-size: 0.875rem;
         }
 
@@ -74,17 +70,11 @@
 
     .invite button {
         margin-top: 3rem;
-        border: none;
         width: 14rem;
         height: 2rem;
         border-radius: 0.3125rem;
         background-color: var(--yellow);
-        color: var(--bg-color);
         font-weight: 800;
-        cursor: pointer;
     }
 
-    button:active {
-        scale: 0.9;
-    }
 }

@@ -1,0 +1,128 @@
+.code-conf {
+    
+    button {
+        height: 2.25rem;
+        border-radius: 0.625rem;
+        font-size: 1rem;
+    }
+
+    button:disabled {
+        pointer-events: none;
+    }
+
+    .enter-code {
+        
+        label {
+            color: #FFF;
+            font-size: 1.2rem;
+        }
+    
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+    
+            input {
+                background-color: transparent;
+                border: 1px solid var(--grey);
+                outline: none;
+                border-radius: 0.625rem;
+                padding-left: 1rem;
+                width: 35%;
+                height: 2.0625rem;
+                font-size: 1.2rem;
+                color: var(--grey);
+            }
+
+            button {
+                width: 20%;
+                background-color: var(--aqua);
+            }
+        }
+    }
+
+    .ruler {
+        margin: 2rem auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        span {
+            hr {
+                width: 9.5rem;
+                border-bottom: none;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--grey);
+            margin: 0;
+        }
+    }
+
+
+    .generate-code {
+        button {
+            width: 50%;
+            font-weight: 700;
+            background-color: var(--yellow);
+        }
+
+        p {
+            color: var(--grey);
+            
+            span {
+                color: #FFF;
+                font-weight: 800;
+            }
+
+        }
+        .copy-share {
+            display: flex;
+            justify-content: center;
+
+            button {
+                height: 2rem;
+                width: fit-content;
+                background-color: transparent;
+
+                svg {
+                    width: 2rem;
+                    height: 1.5rem;
+                    color: var(--aqua)
+                }
+    
+                &:disabled {
+                    pointer-events: auto;
+                }
+            }
+
+        }
+    }
+
+    .conf-response {
+        p {
+            margin: 2rem auto 0;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        h3 {
+            margin: 1rem auto 0;
+            color: #FFF;
+        }
+    }
+
+}
+
+@media screen and (max-width: 970px) {
+    .code-conf {
+        .ruler {
+            width: 95%;
+        }
+    }
+}

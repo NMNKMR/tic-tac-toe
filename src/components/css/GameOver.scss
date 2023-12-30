@@ -1,11 +1,7 @@
 .game-over {
-    width: 26rem;
-    background-color: var(--bg-color);
-    text-align: center;
-    padding: 1.5rem 0;
-    position: relative;
 
     .game-result {
+        margin-top: 0;
         color: #ACC2CD;
         font-size: 0.9375rem;
         font-weight: 700;
@@ -35,9 +31,6 @@
             width: 7.0625rem;
             height: 2.0625rem;
             border-radius: 0.625rem;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
         }
         
         .quit {
@@ -47,14 +40,5 @@
         .play-again {
             background-color: var(--aqua);
         }
-    }
-
-    .close-popup {
-        position: absolute;
-        top: -0.5rem;
-        right: 0.5rem;
-        color: var(--light-grey);
-        font-size: 2.5rem;
-        cursor: pointer;
     }
 }
