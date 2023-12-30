@@ -42,11 +42,11 @@ function PlayWithFriend({player, removePlayArea, gameCode, updateGameCode}) {
       if(snapshot.exists()) {
 
         if(snapshot.val().gameStarts) {
-          const {board: realBoard, currentPlayer, turnCount: realCount, winner, scores} = snapshot.val();
+          const {board: realBoard, currentPlayer, turnCount: realCount, winner, scores, firstTurn} = snapshot.val();
           
           (turnCount!==realCount) && setBoard(realBoard);
-          if(winner) gameOver({isWin: true, currentPlayer, winner, scores})
-          else if(realCount===9) gameOver({isWin: false, scores, winner: "tie"})
+          if(winner) gameOver({isWin: true, currentPlayer, winner, scores, firstTurn})
+          else if(realCount===9) gameOver({isWin: false, scores, winner: "tie", firstTurn})
           else setTurn(currentPlayer);
           
           turnCount = realCount
@@ -85,7 +85,7 @@ function PlayWithFriend({player, removePlayArea, gameCode, updateGameCode}) {
   }
 
   
-  const gameOver = ({isWin, currentPlayer, winner, scores}) => {
+  const gameOver = ({isWin, currentPlayer, winner, scores, firstTurn}) => {
         
     setTimeout(() => {
         isWin ?
@@ -103,6 +103,7 @@ function PlayWithFriend({player, removePlayArea, gameCode, updateGameCode}) {
             setNewRoundTimer(null);
             update(getGameRef(`${gameCode}`), {gameStarts: false, scores: {...scores, [winner]: scores[winner]+1}})
             updateScores(winner);
+            startTurn = firstTurn;
     }, 500);
   }
 
